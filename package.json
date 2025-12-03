@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "start": "npm run build && node --env-file=.env .",
-    "build": "npx tsc"
+    "build": "npx tsc",
+    "test": "PORT=5000 DB_NAME=taskdb JWT_SECRET=dfcaf3f3bd38384352e6f49b45bb236ddc24e544e6fdb6ad03d39bcba73e5598 vitest run"
   },
   "dependencies": {
     "argon2": "^0.44.0",
@@ -22,6 +23,9 @@
     "@types/morgan": "^1.9.10",
     "@types/node": "^24.10.1",
     "@types/pg": "^8.15.6",
-    "typescript": "^5.9.3"
+    "@types/supertest": "^6.0.3",
+    "supertest": "^7.1.4",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.15"
   }
 }
